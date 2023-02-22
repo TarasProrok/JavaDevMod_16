@@ -1,7 +1,7 @@
 public class SumCalculator {
-    public int sum(int n) {
-        if (n < 0) {
-            throw new IllegalArgumentException("n should be non-negative");
+    public static int sum(int n) throws IllegalArgumentException {
+        if ((n < 0) || (n==0)) {
+            throw new IllegalArgumentException("n bigger then 0");
         }
         if (n == 0) {
             throw new IllegalArgumentException("n should not be equals to 0");

@@ -1,11 +1,9 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-//import org.testng.annotations.Test;
-//import static org.junit.jupiter.api.Assertions.*;
 import static org.testng.Assert.assertThrows;
 import static org.testng.AssertJUnit.assertEquals;
 
-public class TestSumCalculator {
+class TestSumCalculator {
     private SumCalculator calculator;
 
     @BeforeEach
@@ -24,10 +22,9 @@ public class TestSumCalculator {
     }
 
     @Test
-    void testSum0() {
+    void testSumZero() {
         assertThrows(IllegalArgumentException.class, () -> calculator.sum(0));
     }
-
     @Test
     void testSumNegative() {
         assertThrows(IllegalArgumentException.class, () -> calculator.sum(-1));
