@@ -6,6 +6,7 @@ import static org.testng.AssertJUnit.assertEquals;
 class TestSumCalculator {
     private SumCalculator calculator;
 
+
     @BeforeEach
     void setUp() {
         calculator = new SumCalculator();
