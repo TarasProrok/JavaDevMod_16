@@ -10,11 +10,16 @@
 name: Java CI
 
 on:
+  push:
+    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
+permissions:
+  contents: read
+
 jobs:
-  test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +28,6 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: 'gradle'
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: Test with gradle
