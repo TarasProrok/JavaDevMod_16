@@ -28,6 +28,10 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Init gradle wrapper
+        run: gradle wrapper
+      - name: Build with Gradle wrapper
+        run: ./gradlew build
       - name: Make gradlew executable
         run: chmod +x ./gradlew
       - name: Test with gradle
